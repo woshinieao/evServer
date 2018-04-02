@@ -4,7 +4,7 @@
 static struct event_base* main_base;
 static int m_ThreadCnt = 5;
 
-static cbNotify cbnotify;
+static cbNotify cbnotify = NULL;
 static LIBEVENT_THREAD *m_pThread;
 static conn *m_pConnList= NULL;
 static struct event main_event;
@@ -262,7 +262,8 @@ static void thread_recv_data(const int fd, const short which, void *arg)
 	}
 	else 
 	{
-		cbnotify(buffs,nread);
+		if(cbnotify != NULL)
+			cbnotify(buffs,nread);
 
 	}
     return;

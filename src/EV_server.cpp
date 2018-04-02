@@ -14,6 +14,8 @@ static int timecheck = 180;
 
 int ServerLog(const char *format ,... )
 {
+
+
 	static FILE *fpLog = NULL;
 	int result = 0;
 	struct stat buf;

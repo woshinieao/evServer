@@ -249,11 +249,6 @@ typedef struct {
 } LIBEVENT_THREAD;  
 
 
-
-
-
-
-
 typedef struct {
     pthread_t thread_id;        /* unique ID of this thread */
     struct event_base *base;    /* libevent handle this thread uses */

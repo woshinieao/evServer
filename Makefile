@@ -52,7 +52,7 @@ SYSTEM_SERVER_INC= -I$(TOP_DIR)/inc
 
 INC_DIR =  $(SYSTEM_SERVER_INC)
 
-LIB_DIR =-Wl,-rpath, -L./lib/linux -L/usr/lib/x86_64-linux-gnu/  
+LIB_DIR =-Wl,-rpath, -L./lib/linux -L/usr/lib/x86_64-linux-gnu/ -L./lib 
  
 LIBS +=  -lpthread   -levent $(LIB_DIR)  
 #-lptz
